@@ -6,3 +6,5 @@ syntax: glob
 preprocessor.opensdf
 preprocessor.sdf
 preprocessor.suo
+preprocessor/a.exe
+preprocessor/a.out
