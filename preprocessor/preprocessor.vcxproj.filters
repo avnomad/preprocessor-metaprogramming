@@ -20,28 +20,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="count.h">
+    <ClInclude Include="0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="count0.h">
+    <ClInclude Include="1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="count1.h">
+    <ClInclude Include="2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="count2.h">
+    <ClInclude Include="3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="count3.h">
+    <ClInclude Include="4.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="count4.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="count5.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="print.h">
+    <ClInclude Include="5.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -50,9 +50,6 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
-      <PreprocessToFile>true</PreprocessToFile>
-      <PreprocessSuppressLineNumbers>true</PreprocessSuppressLineNumbers>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -72,6 +69,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -84,14 +83,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="count.h" />
-    <ClInclude Include="count0.h" />
-    <ClInclude Include="count1.h" />
-    <ClInclude Include="count2.h" />
-    <ClInclude Include="count3.h" />
-    <ClInclude Include="count4.h" />
-    <ClInclude Include="count5.h" />
-    <ClInclude Include="print.h" />
+    <ClInclude Include="0.h" />
+    <ClInclude Include="1.h" />
+    <ClInclude Include="2.h" />
+    <ClInclude Include="3.h" />
+    <ClInclude Include="4.h" />
+    <ClInclude Include="5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
