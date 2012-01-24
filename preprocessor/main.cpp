@@ -10,9 +10,9 @@ using std::endl;
 
 int main()
 {
-
-#define H_SUBSTITUTION_STRING(i,j) "(" escape(i) "," escape(j) "), "
-#define V_SUBSTITUTION_STRING(n) cout << SUBSTITUTE_HORIZONTALLY(3)(n) << endl;
+#define PAIR(i,j) "(" escape(i) "," escape(j) ")"
+#define H_SUBSTITUTION_STRING(i,j) PAIR(i,j) ", "
+#define V_SUBSTITUTION_STRING(n) cout << SUBSTITUTE_HORIZONTALLY(2)(n) PAIR(2,n) << endl;
 	SUBSTITUTE_VERTICALLY(10)
 
 	system("PAUSE");
