@@ -17,14 +17,44 @@ using std::system;
 #define xconcat(A,B) A##B
 
 
+int g(int f())
+{
+	return f();
+}
+
+#define H_SUBSTITUTION_STRING(i,j,arg) ,arg concat(a,i)
+#define V_SUBSTITUTION_STRING(j,IGNORE) int g(int f(int a SUBSTITUTE_HORIZONTALLY(j)(j,int)), int a SUBSTITUTE_HORIZONTALLY(j)(j,int)) \
+{ \
+	return f(a SUBSTITUTE_HORIZONTALLY(j)(j,)); \
+}
+
+SUBSTITUTE_VERTICALLY(10)(/**/)
+
+
+int f0()
+{
+	return 0;
+}
+int f1(int a1)
+{
+	return a1;
+}
+int f2(int a1,int a2)
+{
+	return a2;
+}
+int f3(int a1,int a2,int a3)
+{
+	return a3;
+}
+
 int main()
 {
-#define PAIR(i,j) "(" escape(i) "," escape(j) ")"
-#define H_SUBSTITUTION_STRING(i,j,arg) PAIR(i,j) ", "
-#define V_SUBSTITUTION_STRING(n,arg) cout << SUBSTITUTE_HORIZONTALLY(n)(n,arg) PAIR(n,n) << endl;
-	SUBSTITUTE_VERTICALLY(10)(/**/)
+	cout << g(f0) << endl;
+	cout << g(f1,1) << endl;
+	cout << g(f2,1,2) << endl;
+	cout << g(f3,1,2,3) << endl;
 
-
-		system("PAUSE");
+	system("PAUSE");
 	return 0;
 } // end function main
