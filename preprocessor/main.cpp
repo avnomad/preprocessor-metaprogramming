@@ -2,22 +2,18 @@
 using std::cout;
 using std::cin;
 using std::endl;
-using std::cerr;
-using std::clog;
-using std::left;
 
-#define cat(A,B) A##B
-#define xcat(A,B) cat(A,B)
+#include "hv preprocessor substitutions.h"
 
-#define str(A) #A
-#define xstr(A) str(A)
+#define escape(s) xescape(s)
+#define xescape(s) #s
 
 int main()
 {
 
-#define END 4
-#define SUBSTITUTE(n) cout << n << endl;
-#include "0.h"
+#define H_SUBSTITUTION_STRING(i,j) "(" escape(i) "," escape(j) "), "
+#define V_SUBSTITUTION_STRING(n) cout << SUBSTITUTE_HORIZONTALLY(3)(n) << endl;
+	SUBSTITUTE_VERTICALLY(10)
 
 	system("PAUSE");
 	return 0;
